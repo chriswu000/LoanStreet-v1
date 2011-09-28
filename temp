@@ -1,0 +1,51 @@
+Usage:
+  rails generate scaffold NAME [field:type field:type] [options]
+
+Options:
+  -o, --orm=NAME                  # Orm to be invoked
+                                  # Default: active_record
+      [--force-plural]            # Forces the use of a plural ModelName
+  -c, --scaffold-controller=NAME  # Scaffold controller to be invoked
+                                  # Default: scaffold_controller
+  -y, [--stylesheets]             # Indicates when to generate stylesheets
+                                  # Default: true
+
+ActiveRecord options:
+      [--migration]            # Indicates when to generate migration
+                               # Default: true
+      [--timestamps]           # Indicates when to generate timestamps
+                               # Default: true
+      [--parent=PARENT]        # The parent class for the generated model
+  -t, [--test-framework=NAME]  # Test framework to be invoked
+                               # Default: rspec
+
+Rspec options:
+  [--fixture]                   # Indicates when to generate fixture
+  [--fixture-replacement=NAME]  # Fixture replacement to be invoked
+  [--singleton]                 # Supply to create a singleton controller
+  [--controller-specs]          # Generate controller specs
+                                # Default: true
+  [--view-specs]                # Generate view specs
+                                # Default: true
+  [--webrat-matchers]           # Use webrat matchers in view specs
+  [--helper-specs]              # Generate helper specs
+                                # Default: true
+  [--routing-specs]             # Generate routing specs
+                                # Default: true
+  [--integration-tool=NAME]     # Integration tool to be invoked
+                                # Default: rspec
+
+ScaffoldController options:
+  -e, [--template-engine=NAME]  # Template engine to be invoked
+                                # Default: erb
+      [--helper]                # Indicates when to generate helper
+                                # Default: true
+
+Runtime options:
+  -f, [--force]    # Overwrite files that already exist
+  -p, [--pretend]  # Run but do not make any changes
+  -q, [--quiet]    # Supress status output
+  -s, [--skip]     # Skip files that already exist
+
+Description:
+    Create rails files for scaffold generator.

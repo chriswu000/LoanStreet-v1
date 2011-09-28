@@ -1,0 +1,19 @@
+Bank
+  Name
+
+  has_many loans 
+
+Loan
+  Type 
+    Commercial
+    Agricultural
+    Industrial
+
+  Interest rate
+    between .01% - 30.00%
+
+  Maturity date
+    When added, should be in the future
+
+  State
+

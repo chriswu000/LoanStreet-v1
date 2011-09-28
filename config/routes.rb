@@ -1,4 +1,19 @@
 V1::Application.routes.draw do
+
+  get 'bank_admin' => 'bank_admin#index'
+
+  controller :sessions do
+    get    'login'  =>  :new
+    post   'login'  =>  :create
+    delete 'logout' =>  :delete
+  end
+
+  resources :loans
+
+  resources :banks
+
+  root :to => 'sessions#new'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
