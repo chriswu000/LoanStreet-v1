@@ -1,6 +1,7 @@
 class BankAdminController < ApplicationController
   def index
-    title = "Chris Wu test title"
+    @bank = Bank.find(session[:bank_id])
+    @loans = Loan.all
   end
 
 end

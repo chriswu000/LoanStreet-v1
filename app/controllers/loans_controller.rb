@@ -25,6 +25,8 @@ class LoansController < ApplicationController
   # GET /loans/new.xml
   def new
     @loan = Loan.new
+    @states = Loan::STATES
+    @loan_types = Loan::LOAN_TYPES
 
     respond_to do |format|
       format.html # new.html.erb
@@ -44,7 +46,7 @@ class LoansController < ApplicationController
 
     respond_to do |format|
       if @loan.save
-        format.html { redirect_to(@loan, :notice => 'Loan was successfully created.') }
+        format.html { redirect_to(bank_admin_path, :notice => 'Loan was successfully created.') }
         format.xml  { render :xml => @loan, :status => :created, :location => @loan }
       else
         format.html { render :action => "new" }
